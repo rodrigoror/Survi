@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-//apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -34,15 +34,17 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    // Anko Commons
+    //Anko Commons
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
 
+    //Room
     implementation "android.arch.persistence.room:runtime:$roomVersion"
-    kapt "android.arch.persistence.room:compiler:$roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
     androidTestImplementation "android.arch.persistence.room:testing:$roomVersion"
-    // Lifecycle components
+
+    //Lifecycle components
     implementation "android.arch.lifecycle:extensions:$archLifecycleVersion"
-    kapt "android.arch.lifecycle:compiler:$archLifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$archLifecycleVersion"
 
     //RX
     implementation "io.reactivex.rxjava2:rxjava:2.1.15"
@@ -50,6 +52,10 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxkotlin:2.2.0"
     implementation "com.jakewharton.rxbinding2:rxbinding:2.0.0"
 
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    //dagger
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
     implementation "com.google.dagger:dagger:$daggerVersion"
+
+    //databinding
+    annotationProcessor "com.android.databinding:compiler:3.1.2"
 }
