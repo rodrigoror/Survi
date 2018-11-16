@@ -58,4 +58,7 @@ dependencies {
 
     //databinding
     annotationProcessor "com.android.databinding:compiler:3.1.2"
+
+    //imagens
+    implementation "com.squareup.picasso:picasso:2.71828"
 }

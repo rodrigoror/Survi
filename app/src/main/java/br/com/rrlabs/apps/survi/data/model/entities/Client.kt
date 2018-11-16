@@ -15,6 +15,8 @@ data class Client(
         @NonNull
         val name: String,
         @NonNull
-        val contact: String
+        val contact: String,
+        val logoImageURL: String,
+        val largeImageURL: String
 ) {
 }
