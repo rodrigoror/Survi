@@ -18,12 +18,12 @@ class ViewUtils {
     }
 
     fun dpToPx(dp: Float): Int {
-        val density = Resources.getSystem().getDisplayMetrics().density
+        val density = Resources.getSystem().displayMetrics.density
         return Math.round(dp * density)
     }
 
     fun pxToDp(px: Float): Float {
-        val densityDpi = Resources.getSystem().getDisplayMetrics().densityDpi
+        val densityDpi = Resources.getSystem().displayMetrics.densityDpi
         return px / (densityDpi / 160f)
     }
 }

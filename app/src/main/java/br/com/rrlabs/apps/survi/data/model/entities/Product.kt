@@ -4,18 +4,16 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 import android.support.annotation.NonNull
 import java.math.BigDecimal
-import java.math.BigInteger
 
 @Entity
 data class Product (
         @PrimaryKey(autoGenerate = true)
         @NonNull
-        val id : BigInteger,
+        val id : Int,
         @NonNull val name : String,
         val description : String,
         @NonNull val quantity: Int,
         val barcode: String,
-        val price : BigDecimal,
-        val price4sell : BigDecimal
-        ){
-}
+        val price : String,
+        val price4sell : String
+        )

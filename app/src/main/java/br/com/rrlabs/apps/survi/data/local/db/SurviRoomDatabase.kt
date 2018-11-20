@@ -3,7 +3,9 @@ package br.com.rrlabs.apps.survi.data.local.db
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
+import android.arch.persistence.room.TypeConverters
 import android.content.Context
+import android.databinding.adapters.Converters
 import br.com.rrlabs.apps.survi.data.local.db.dao.ClientDao
 import br.com.rrlabs.apps.survi.data.local.db.dao.ProductDao
 import br.com.rrlabs.apps.survi.data.local.db.dao.ProjectDao
@@ -12,6 +14,7 @@ import br.com.rrlabs.apps.survi.data.model.entities.Product
 import br.com.rrlabs.apps.survi.data.model.entities.Project
 
 @Database(entities = arrayOf(Client::class, Product::class, Project::class),version = 1)
+//@TypeConverters(Converters::class)
 abstract class SurviRoomDatabase : RoomDatabase(){
 
     companion object {
@@ -22,7 +25,7 @@ abstract class SurviRoomDatabase : RoomDatabase(){
                 synchronized(SurviRoomDatabase::class.java) {
                     //Create the database
                     instance = Room.databaseBuilder(
-                            context.applicationContext,
+                                context.applicationContext,
                             SurviRoomDatabase::class.java,
                             "survi_database"
                     ).build()

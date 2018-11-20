@@ -16,9 +16,9 @@ interface ProjectDao {
     @Delete
     fun delete(vararg project: Project)
 
-    @Query("SELECT * FROM Project ORDER BY client asc")
+    @Query("SELECT * FROM Project ORDER BY client_id asc")
     fun getAll() : LiveData<List<Project>>
 
-    @Query("SELECT * FROM PROJECT WHERE client = :client ORDER BY active desc")
-    fun getAllByClient(vararg client: Client): LiveData< List<Project>>
+    @Query("SELECT * FROM PROJECT WHERE client_id = :client ORDER BY active desc")
+    fun getAllByClient(vararg client: Int): LiveData< List<Project>>
 }
