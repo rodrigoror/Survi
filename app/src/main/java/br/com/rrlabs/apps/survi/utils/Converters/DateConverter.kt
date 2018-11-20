@@ -4,10 +4,7 @@ import android.arch.persistence.room.TypeConverter
 import java.math.BigInteger
 import java.util.*
 
-fun Long.toBigInteger() = BigInteger.valueOf(this)
-fun Int.toBigInteger() = BigInteger.valueOf(toLong())
-
-class Converters {
+class DateConverters {
 
     @TypeConverter
     fun fromTimestamp(value: Long?): Date? {
@@ -17,4 +14,9 @@ class Converters {
     fun dateToTimestamp(date: Date?): Long? {
         return date?.time
     }
+}
+
+class BigInteger {
+    fun Long.toBigInteger() = BigInteger.valueOf(this)
+    fun Int.toBigInteger() = BigInteger.valueOf(toLong())
 }

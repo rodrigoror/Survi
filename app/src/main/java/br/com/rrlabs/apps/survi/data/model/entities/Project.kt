@@ -2,7 +2,6 @@ package br.com.rrlabs.apps.survi.data.model.entities
 
 import android.arch.persistence.room.*
 import android.support.annotation.NonNull
-import br.com.rrlabs.apps.survi.utils.Converters.ListConverter
 
 @Entity(/*indices = [Index(name = "productId"), Index(name = "clientId")],*/
         foreignKeys = arrayOf(
