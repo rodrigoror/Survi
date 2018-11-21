@@ -19,4 +19,8 @@ interface ClientDao {
     @Query("SELECT * FROM Client ORDER BY name")
     fun getAll():LiveData<List<Client>>
 
+    @Query("SELECT * FROM Client ORDER BY id")
+    fun getAllOrderById():List<Client>
+
+
 }

@@ -3,9 +3,7 @@ package br.com.rrlabs.apps.survi.data.local.db
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
-import android.arch.persistence.room.TypeConverters
 import android.content.Context
-import android.databinding.adapters.Converters
 import br.com.rrlabs.apps.survi.data.local.db.dao.ClientDao
 import br.com.rrlabs.apps.survi.data.local.db.dao.ProductDao
 import br.com.rrlabs.apps.survi.data.local.db.dao.ProjectDao
