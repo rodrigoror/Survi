@@ -1,4 +1,4 @@
-package br.com.rrlabs.apps.survi.ui
+package br.com.rrlabs.apps.survi.ui.project
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar

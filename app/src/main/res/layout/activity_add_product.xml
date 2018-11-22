@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#FFFFFF">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/begin_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/end_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Product"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@id/end_margin"
+        app:layout_constraintStart_toStartOf="@id/begin_margin"
+        />
+
+    <EditText
+        android:id="@+id/addProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@id/end_margin"
+        app:layout_constraintStart_toStartOf="@id/begin_margin"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:text="Rebimboca 3/4" />
+
+    <EditText
+        android:id="@+id/addProductDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@id/end_margin"
+        app:layout_constraintStart_toStartOf="@id/begin_margin"
+        app:layout_constraintTop_toBottomOf="@id/addProductName"
+        tools:text="Rebinboca metalica com adição de materiais plasticos para acabamento" />
+
+    <EditText
+        android:id="@+id/addProductQtde"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Add the quantity"
+        android:inputType="number"
+        tools:text="100"
+        app:layout_constraintStart_toStartOf="@id/begin_margin"
+        app:layout_constraintEnd_toStartOf="@id/addProductPrice4Sell"
+        app:layout_constraintTop_toBottomOf="@id/addProductDescription"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        />
+
+    <EditText
+        android:id="@+id/addProductPrice4Sell"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="P.Venda"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@id/addProductPrice"
+        app:layout_constraintStart_toEndOf="@id/addProductQtde"
+        app:layout_constraintTop_toTopOf="@id/addProductQtde"
+        tools:text="14.45" />
+
+    <EditText
+        android:id="@+id/addProductPrice"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="P.Custo"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@id/end_margin"
+        app:layout_constraintStart_toEndOf="@id/addProductPrice4Sell"
+        app:layout_constraintTop_toTopOf="@id/addProductQtde"
+        tools:text="13.15" />
+
+    <EditText
+        android:id="@+id/addProductBarcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@id/end_margin"
+        app:layout_constraintStart_toStartOf="@id/begin_margin"
+        app:layout_constraintTop_toBottomOf="@id/addProductPrice"
+        tools:text="100029002983790" />
+
+    <Button
+        android:id="@+id/addProductBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add/Edit"
+        app:layout_constraintEnd_toEndOf="@id/end_margin"
+        app:layout_constraintStart_toStartOf="@id/begin_margin"
+        app:layout_constraintTop_toBottomOf="@id/addProductBarcode"
+         />
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
