@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable name="product"
+        type="br.com.rrlabs.apps.survi.data.model.entities.Product"/>
+</data>
+<android.support.v4.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-<android.support.constraint.ConstraintLayout
+    <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
@@ -42,6 +47,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="@{product.name}"
         app:layout_constraintEnd_toEndOf="@id/end_margin"
         app:layout_constraintStart_toStartOf="@id/begin_margin"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
@@ -54,6 +60,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
+        android:text="@{product.description}"
         app:layout_constraintEnd_toEndOf="@id/end_margin"
         app:layout_constraintStart_toStartOf="@id/begin_margin"
         app:layout_constraintTop_toBottomOf="@id/addProductName"
@@ -67,6 +74,7 @@
         android:ems="10"
         android:hint="Add the quantity"
         android:inputType="number"
+        android:text="@{product.quantity}"
         tools:text="100"
         app:layout_constraintStart_toStartOf="@id/begin_margin"
         app:layout_constraintEnd_toStartOf="@id/addProductPrice4Sell"
@@ -81,6 +89,7 @@
         android:ems="10"
         android:hint="P.Venda"
         android:inputType="numberDecimal"
+        android:text="@{product.price4sell}"
         app:layout_constraintEnd_toStartOf="@id/addProductPrice"
         app:layout_constraintStart_toEndOf="@id/addProductQtde"
         app:layout_constraintTop_toTopOf="@id/addProductQtde"
@@ -93,6 +102,7 @@
         android:ems="10"
         android:hint="P.Custo"
         android:inputType="numberDecimal"
+        android:text="@{product.price}"
         app:layout_constraintEnd_toEndOf="@id/end_margin"
         app:layout_constraintStart_toEndOf="@id/addProductPrice4Sell"
         app:layout_constraintTop_toTopOf="@id/addProductQtde"
@@ -105,6 +115,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="number"
+        android:text="@{product.barcode}"
         app:layout_constraintEnd_toEndOf="@id/end_margin"
         app:layout_constraintStart_toStartOf="@id/begin_margin"
         app:layout_constraintTop_toBottomOf="@id/addProductPrice"
@@ -120,13 +131,5 @@
         app:layout_constraintStart_toStartOf="@id/begin_margin"
         app:layout_constraintTop_toBottomOf="@id/addProductBarcode"
          />
-
-
-
-
-
-
-
-
 </android.support.constraint.ConstraintLayout>
-</android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.NestedScrollView></layout>

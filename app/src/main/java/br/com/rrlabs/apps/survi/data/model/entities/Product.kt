@@ -7,7 +7,6 @@ import android.support.annotation.NonNull
 @Entity
 data class Product (
         @PrimaryKey(autoGenerate = true)
-        @NonNull
         val id : Int,
         @NonNull val name : String,
         val description : String,

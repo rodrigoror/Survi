@@ -7,7 +7,6 @@ import android.support.annotation.NonNull
 @Entity
 data class Client(
         @PrimaryKey(autoGenerate = true)
-        @NonNull
         val id: Int,
         @NonNull
         val cpf: String,

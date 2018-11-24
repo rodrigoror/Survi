@@ -21,7 +21,6 @@ import android.support.annotation.NonNull
         ))
 data class Project(
         @PrimaryKey(autoGenerate = true)
-        @NonNull
         val id: Int,
         @NonNull val active: Boolean,
         /*@TypeConverters(ListConverter::class)

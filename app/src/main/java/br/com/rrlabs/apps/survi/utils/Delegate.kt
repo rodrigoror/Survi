@@ -7,6 +7,11 @@ import android.databinding.BaseObservable
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 
+/**
+ * see more
+ * https://android.googlesource.com/platform/frameworks/data-binding/+/master/extensions/baseAdapters/src/main/java/android/databinding/adapters?autodive=0%2F
+ */
+
 fun <R : BaseObservable, T : Any> bindable(
         value: T, bindingRes: Int): BindableDelegate<R, T> {
     return BindableDelegate(value, bindingRes)

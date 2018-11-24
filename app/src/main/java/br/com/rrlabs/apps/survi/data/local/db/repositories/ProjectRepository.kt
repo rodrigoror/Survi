@@ -1,4 +1,4 @@
-package br.com.rrlabs.apps.survi.data.model.repositories
+package br.com.rrlabs.apps.survi.data.local.db.repositories
 
 import android.app.Application
 import br.com.rrlabs.apps.survi.data.local.db.SurviRoomDatabase

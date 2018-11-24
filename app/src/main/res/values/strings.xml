@@ -13,4 +13,5 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="title_activity_main">Inventory</string>
     <string name="title_activity_product">Products</string>
+    <string name="post_error">Something are Wrong</string>
 </resources>
