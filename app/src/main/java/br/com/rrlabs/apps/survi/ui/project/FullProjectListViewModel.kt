@@ -53,17 +53,26 @@ class FullProjectListViewModel(private val projectDao: ProjectDao):BaseViewModel
                 )
     }
 
+    /**
+     *
+     */
+
     private fun g(result: List<Project>?): List<FullProjectItem> {
-        var fullProjectItem: List<FullProjectItem>
+        var fullProjectList: MutableList<FullProjectItem>?  = null
         for (item in result!!) {
-           var fullProjectItem: FullProjectItem(item.name,
-            item.projectId: String,
-            val active:Boolean,
-            val projectDescription: String,
-            val clientName: String)
-            fullProjectItem.
+            val act = item.active
+            val pId = item.id
+            val name = item.name
+            val productId = item.productId
+            val clientId = item.clientId
+            val fullProjectItem =  FullProjectItem(name,pId.toString(),act,"Description "+pId+" "+productId, getClientNameById(clientId))
+            fullProjectList?.add(fullProjectItem)
         }
-        return fullProjectItem
+        return fullProjectList!!
+    }
+
+    private fun getClientNameById(clientId: Int): String {
+        return "Nome do Cliente "+clientId
     }
 
     private fun onRetrievePostListError() {

@@ -16,7 +16,7 @@ class FullProjectAdapter : RecyclerView.Adapter<FullProjectAdapter.ViewHolder>()
     private lateinit var items :  List<FullProjectItem>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var binding:ContentMainItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.content_main_item,parent,false)
+        var binding:ContentMainItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.content_main,parent,false)
         return ViewHolder(binding)
     }
 

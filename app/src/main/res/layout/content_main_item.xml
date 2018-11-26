@@ -2,75 +2,90 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
-        <variable name="project"
-            type="br.com.rrlabs.apps.survi.data.model.entities.Project"/>
+
+        <variable
+            name="project"
+            type="br.com.rrlabs.apps.survi.data.model.entities.Project" />
     </data>
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true"
             android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/tvProjectId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="@{project.id}"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="10012" />
+            <TextView
+                android:id="@+id/tvProjectId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@{project.id}"
+                app:layout_constraintEnd_toStartOf="@+id/unTerco_margin"
+                app:layout_constraintStart_toStartOf="@id/begin_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="10012" />
 
-    <TextView
-        android:id="@+id/tvClientName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@{project.clientId}"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Nome do Cliente" />
+            <TextView
+                android:id="@+id/tvClientName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{project.clientId}"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/end_margin"
+                app:layout_constraintStart_toStartOf="@id/unTerco_margin"
+                app:layout_constraintTop_toTopOf="@+id/tvProjectId"
+                tools:text="Nome do Cliente" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="projectName"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="49dp"
-        tools:text="Nome do Projeto" />
+            <TextView
+                android:id="@+id/tvProjectName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@{project.name}"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/unTerco_margin"
+                app:layout_constraintStart_toStartOf="@id/begin_margin"
+                app:layout_constraintTop_toBottomOf="@+id/tvClientName"
+                tools:text="Nome do Projeto" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="225dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="someDesc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        tools:layout_editor_absoluteY="49dp"
-        tools:text="Alguma descricao do projeto como se pode ver, algo Lore ipsun sun lore " />
+            <TextView
+                android:id="@+id/tvProjectDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{project.clientId + project.ProductId}"
+                app:layout_constraintEnd_toStartOf="@+id/end_margin"
+                app:layout_constraintStart_toStartOf="@id/unTerco_margin"
+                app:layout_constraintTop_toTopOf="@+id/tvProjectName"
+                tools:text="Alguma descricao do projeto como se pode ver, algo Lore ipsun sun lore " />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="135dp" />
-        </android.support.constraint.ConstraintLayout></android.support.v4.widget.NestedScrollView></layout>
+            <android.support.constraint.Guideline
+                android:id="@+id/unTerco_margin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.37"
+                app:layout_constraintHeight_percent="30" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/begin_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/end_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+        </android.support.constraint.ConstraintLayout>
+</layout>

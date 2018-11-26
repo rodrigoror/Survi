@@ -21,11 +21,11 @@ import android.support.annotation.NonNull
         ))
 data class Project(
         @PrimaryKey(autoGenerate = true)
-        val id: Int,
-        @NonNull val active: Boolean,
+        public val id: Int,
+        @NonNull public  val active: Boolean,
         /*@TypeConverters(ListConverter::class)
         val products: List<Product>,*/
-         @ColumnInfo(name = "product_id") val productId: Int,
-         @ColumnInfo(name = "client_id") val clientId: Int,
-        @NonNull val name: String
+         @ColumnInfo(name = "product_id") public val productId: Int,
+         @ColumnInfo(name = "client_id") public val clientId: Int,
+        @NonNull public val name: String
 )
