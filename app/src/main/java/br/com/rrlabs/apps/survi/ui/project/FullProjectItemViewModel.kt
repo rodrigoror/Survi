@@ -4,6 +4,7 @@ import android.arch.lifecycle.MutableLiveData
 import br.com.rrlabs.apps.survi.base.BaseViewModel
 import br.com.rrlabs.apps.survi.data.model.entities.FullProjectItem
 
+/*
 class FullProjectItemViewModel: BaseViewModel(){
     private val name= MutableLiveData<String>()
     private val clientName= MutableLiveData<String>()
@@ -25,4 +26,4 @@ class FullProjectItemViewModel: BaseViewModel(){
     fun getActive(): MutableLiveData<Boolean> {return active}
     fun getProjectDescription(): MutableLiveData<String> {return projectDescription}
 
-}
+}*/

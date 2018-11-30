@@ -13,6 +13,6 @@ interface Api {
     @GET("/clients")
     fun getClients():Observable<List<Client>>
 
-    @GET("/products")
+    @GET("/")
     fun getProducts():Observable<List<Product>>
 }

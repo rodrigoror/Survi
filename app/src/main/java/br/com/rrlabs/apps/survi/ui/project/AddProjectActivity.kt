@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import br.com.rrlabs.apps.survi.R
 
+/*
 class AddProjectActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,3 +12,4 @@ class AddProjectActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_project)
     }
 }
+*/

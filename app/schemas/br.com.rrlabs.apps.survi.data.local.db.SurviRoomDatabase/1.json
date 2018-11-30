@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "6127e33df20ce966c53ca9c77fad13e1",
+    "identityHash": "12f7589f75c97f50a3af997a67453d8b",
     "entities": [
       {
         "tableName": "Client",
@@ -56,7 +56,7 @@
       },
       {
         "tableName": "Product",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `quantity` INTEGER NOT NULL, `barcode` TEXT NOT NULL, `price` TEXT NOT NULL, `price4sell` TEXT NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `quantity` INTEGER NOT NULL, `barcode` TEXT NOT NULL, `price` TEXT NOT NULL, `price4sell` TEXT NOT NULL, `imagem` TEXT NOT NULL, `marca` TEXT NOT NULL, `modelo` TEXT NOT NULL, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -99,13 +99,31 @@
             "columnName": "price4sell",
             "affinity": "TEXT",
             "notNull": true
+          },
+          {
+            "fieldPath": "imagem",
+            "columnName": "imagem",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marca",
+            "columnName": "marca",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modelo",
+            "columnName": "modelo",
+            "affinity": "TEXT",
+            "notNull": true
           }
         ],
         "primaryKey": {
           "columnNames": [
             "id"
           ],
-          "autoGenerate": true
+          "autoGenerate": false
         },
         "indices": [],
         "foreignKeys": []
@@ -180,7 +198,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"6127e33df20ce966c53ca9c77fad13e1\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"12f7589f75c97f50a3af997a67453d8b\")"
     ]
   }
 }

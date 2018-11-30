@@ -13,6 +13,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
+/*
 
 class FullProjectListViewModel(private val projectDao: ProjectDao):BaseViewModel() {
     @Inject
@@ -53,9 +54,11 @@ class FullProjectListViewModel(private val projectDao: ProjectDao):BaseViewModel
                 )
     }
 
-    /**
+    */
+/**
      *
-     */
+     *//*
+
 
     private fun g(result: List<Project>?): List<FullProjectItem> {
         var fullProjectList: MutableList<FullProjectItem>?  = null
@@ -97,4 +100,4 @@ class FullProjectListViewModel(private val projectDao: ProjectDao):BaseViewModel
         subscription.dispose()
     }
 
-}
+}*/

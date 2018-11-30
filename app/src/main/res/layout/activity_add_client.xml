@@ -2,10 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable name="client"
-        type="br.com.rrlabs.apps.survi.data.model.entities.Client"/>
-    </data>
+
 <android.support.v4.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -47,7 +44,6 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@{client.name}"
             app:layout_constraintEnd_toEndOf="@id/end_margin"
             app:layout_constraintStart_toStartOf="@id/begin_margin"
             app:layout_constraintTop_toBottomOf="@+id/textView7"
@@ -60,7 +56,6 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="number"
-            android:text="@{client.cpf}"
             app:layout_constraintEnd_toEndOf="@id/end_margin"
             app:layout_constraintStart_toStartOf="@id/begin_margin"
             app:layout_constraintTop_toBottomOf="@+id/addClientName"
@@ -73,7 +68,6 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="@{client.contact}"
             app:layout_constraintEnd_toEndOf="@id/end_margin"
             app:layout_constraintStart_toStartOf="@id/begin_margin"
             app:layout_constraintTop_toBottomOf="@id/addClientCPF"

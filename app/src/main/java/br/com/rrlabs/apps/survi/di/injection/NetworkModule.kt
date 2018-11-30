@@ -16,7 +16,7 @@ object NetworkModule {
     @Provides
     @Reusable
     @JvmStatic
-    internal fun providePostApi(retrofit: Retrofit):Api{
+    internal fun provideApi(retrofit: Retrofit):Api{
         return retrofit.create(Api::class.java)
     }
 

@@ -14,4 +14,6 @@
     <string name="title_activity_main">Inventory</string>
     <string name="title_activity_product">Products</string>
     <string name="post_error">Something are Wrong</string>
+    <string name="retry">Retry</string>
+    <string name="post_error_list">An error occurred while loading the List</string>
 </resources>

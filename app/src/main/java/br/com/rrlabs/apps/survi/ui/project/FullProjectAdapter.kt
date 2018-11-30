@@ -11,6 +11,7 @@ import br.com.rrlabs.apps.survi.databinding.ContentMainItemBinding
 /**
  *
  */
+/*
 class FullProjectAdapter : RecyclerView.Adapter<FullProjectAdapter.ViewHolder>() {
 
     private lateinit var items :  List<FullProjectItem>
@@ -41,4 +42,4 @@ class FullProjectAdapter : RecyclerView.Adapter<FullProjectAdapter.ViewHolder>()
             binding.viewModel = viewModel
         }
     }
-}
+}*/

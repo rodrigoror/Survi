@@ -6,12 +6,15 @@ import android.support.annotation.NonNull
 
 @Entity
 data class Product (
-        @PrimaryKey(autoGenerate = true)
+        @PrimaryKey
         val id : Int,
         @NonNull val name : String,
         val description : String,
         @NonNull val quantity: Int,
         val barcode: String,
         val price : String,
-        val price4sell : String
+        val price4sell : String,
+        val imagem : String,
+        val marca: String,
+        val modelo: String
         )
